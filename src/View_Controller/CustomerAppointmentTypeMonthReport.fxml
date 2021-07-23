@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="580.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.CustomerAppointmentTypeMonthReportController">
+   <children>
+      <TableView fx:id="typeTotalTableView" layoutX="97.0" layoutY="98.0" prefHeight="420.0" prefWidth="290.0">
+         <columns>
+            <TableColumn fx:id="cARTypeCol" prefWidth="145.0" text="Type" />
+            <TableColumn fx:id="cARTypeAppointmentIdCol" prefWidth="145.0" text="Appointment ID" />
+         </columns>
+      </TableView>
+      <Button fx:id="backAppointmentScheduleBtn" layoutX="932.0" layoutY="536.0" mnemonicParsing="false" onAction="#handleBackAppointmentSchedule" prefHeight="30.0" prefWidth="100.0" text="Back" />
+      <TableView fx:id="monthTotalTableView" layoutX="667.0" layoutY="98.0" prefHeight="420.0" prefWidth="290.0">
+         <columns>
+            <TableColumn fx:id="cARAppointmentDateCol" prefWidth="145.0" text="Appointment Date" />
+            <TableColumn fx:id="cARMonthAppointmentIdCol" prefWidth="145.0" text="Appointment ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="68.0" layoutY="26.0" text="Total Customer Appointments by Type Report">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="631.0" layoutY="26.0" text="Total Customer Appointments by Month Report">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="142.0" layoutY="518.0" prefHeight="36.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="51.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalTypeTxt" editable="false" prefHeight="25.0" prefWidth="82.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="712.0" layoutY="518.0" prefHeight="36.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="51.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalMonthTxt" editable="false" prefHeight="25.0" prefWidth="82.0" />
+         </children>
+      </HBox>
+      <ComboBox fx:id="cARTypeCBox" layoutX="167.0" layoutY="66.0" onAction="#handleSelectType" prefWidth="150.0" promptText="Select Type" />
+      <ComboBox fx:id="cARMonthCBox" layoutX="737.0" layoutY="66.0" onAction="#handleSelectMonth" prefWidth="150.0" promptText="Select Month" />
+      <Line endX="100.0" endY="-67.0" layoutX="422.0" layoutY="67.0" startX="100.0" startY="513.0" />
+   </children>
+</AnchorPane>

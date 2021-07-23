@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.LoginScreenController">
+   <children>
+      <GridPane layoutY="39.0" prefHeight="30.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="appointmentScheduleAppLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="601.0" text="Appointment Schedule App" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER" layoutX="99.0" layoutY="131.0" prefHeight="257.0" prefWidth="400.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="61.5" minHeight="10.0" prefHeight="61.5" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="68.5" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="18.5" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.5" minHeight="10.0" prefHeight="49.5" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.5" minHeight="10.0" prefHeight="49.5" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="usernameTxt" prefHeight="25.0" prefWidth="158.0" promptText="Username" GridPane.columnIndex="1" />
+            <Label fx:id="usernameLbl" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="zoneIDLbl" text="ZoneId" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="userLocationLbl" text="Zone ID" GridPane.rowIndex="4" />
+            <Label fx:id="passwordLbl" text="Password" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="100.0" text="Log In" GridPane.rowIndex="3" />
+            <Button fx:id="exitBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleExitAppFromLogin" prefHeight="30.0" prefWidth="100.0" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="passwordPField" prefHeight="25.0" prefWidth="130.0" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="534.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.CustomerDirectoryController">
+   <children>
+      <Label layoutX="442.0" layoutY="24.0" text="Customer Directory">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerDirectoryTableView" layoutX="15.0" layoutY="97.0" prefHeight="348.0" prefWidth="1002.0">
+         <columns>
+            <TableColumn fx:id="cDCustomerIDCol" prefWidth="104.0" text="Customer ID" />
+            <TableColumn fx:id="cDCustomerNameCol" prefWidth="180.0" text="Customer Name" />
+            <TableColumn fx:id="cDAddressCol" prefWidth="273.5" text="Address" />
+            <TableColumn fx:id="cDPostalCodeCol" prefWidth="88.0" text="Postal Code" />
+            <TableColumn fx:id="cDPhoneNumberCol" prefWidth="120.0" text="Phone Number" />
+            <TableColumn fx:id="cDDivisionCol" prefWidth="138.0" text="Division" />
+            <TableColumn fx:id="cDDivisionIDCol" prefWidth="97.5" text="Division ID" />
+         </columns>
+      </TableView>
+      <Button fx:id="addCustomerBtn" layoutX="649.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleAddCustomer" prefHeight="30.0" prefWidth="110.0" text="Add Customer" />
+      <Button fx:id="updateCustomerBtn" layoutX="778.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleUpdateCustomer" prefHeight="30.0" prefWidth="110.0" text="Update Customer" />
+      <Button fx:id="deleteCustomerBtn" layoutX="907.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" prefHeight="30.0" prefWidth="110.0" text="Delete Customer" />
+      <Button fx:id="backAppointmentScheduleBtn" layoutX="918.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleBackAppointmentSchedule" prefHeight="30.0" prefWidth="100.0" text="Back" />
+      <Button fx:id="searchCustomersBtn" layoutX="670.0" layoutY="62.0" mnemonicParsing="false" onAction="#handleSearchCustomers" prefHeight="30.0" prefWidth="82.0" text="Search" />
+      <TextField fx:id="searchCustomersTxt" layoutX="766.0" layoutY="65.0" prefHeight="25.0" prefWidth="251.0" promptText="Search By Customer ID or Customer Name..." />
+      <Button fx:id="clearSearchCustomersBtn" layoutX="573.0" layoutY="62.0" mnemonicParsing="false" onAction="#handleClearSearchCustomers" prefHeight="30.0" prefWidth="82.0" text="Clear" />
+   </children>
+</AnchorPane>
